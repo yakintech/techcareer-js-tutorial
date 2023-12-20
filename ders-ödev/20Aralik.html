@@ -986,36 +986,38 @@
       return product.unitPrice < 200;
     });
 
-    console.log(lessThanTwoHundred);
+    console.log("less than 200", lessThanTwoHundred);
 
     const lessThanThreeHundred = products.filter((product) => {
       return product.unitPrice < 300;
     });
 
-    console.log(lessThanThreeHundred);
+    console.log("less than 300", lessThanThreeHundred);
 
     const betweenOneHundredOrTwoHunder = products.filter((product) => {
       return product.unitPrice > 100 && product.unitPrice < 200;
     });
 
-    console.log(betweenOneHundredOrTwoHunder);
+    console.log("between 100 and 200 hundred", betweenOneHundredOrTwoHunder);
 
     const startsWithALetter = products.filter((product) => {
       return product.name.startsWith("A") || product.name.startsWith("a");
     });
-    console.log(startsWithALetter);
+    console.log("starts with letter A", startsWithALetter);
 
     const lowerThanTwenty = products.filter((product) => {
       return product.unitPrice < 20;
     });
     const lowerThanTwentyLength = lowerThanTwenty.length;
 
-    console.log(lowerThanTwentyLength);
+    console.log("length of numbers lower than 20", lowerThanTwentyLength);
 
     const includesXLetter = products.filter((product) => {
-      return product.name.indexOf("x") || product.name.indexOf("X");
+      return (
+        product.name.indexOf("x") !== -1 || product.name.indexOf("X") !== -1
+      );
     });
 
-    console.log(includesXLetter);
+    console.log("strings that includes X", includesXLetter);
   </script>
 </html>
