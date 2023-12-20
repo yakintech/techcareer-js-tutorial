@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addRandom()">Add Random Number</button>
+    <ul>
+
+    </ul>
+</body>
+<script>
+    //Butona her bastığında random 1-1000 arasında bir sayı üret ve bu sayıyı ul ye ekle
+
+    function addRandom(){
+        var randomNumber = Math.floor(Math.random() * 50)
+
+        var liElement = document.createElement("li");
+        liElement.innerHTML = randomNumber;
+
+        document.querySelector("ul").appendChild(liElement);
+    }
+
+    //Ek Soru: Aynı sayı varsa eklemesin
+</script>
+</html>

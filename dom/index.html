@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">Show</button>
+    <ul>
+        
+    </ul>
+</body>
+<script>
+    //butona tıkladığında aşağıdaki elemanları ul içerisine yerleştir.
+    let cities = ["İzmir", "İstanbul", "Ankara", "Aydın", "Trabzon"]
+
+    function show(){
+        document.querySelector("ul").innerHTML = "";
+
+        cities.forEach(item => {
+            var liElement = document.createElement("li");
+            liElement.innerHTML = item
+
+            document.querySelector("ul").appendChild(liElement);
+        })
+
+    }
+
+
+
+</script>
+</html>

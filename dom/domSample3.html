@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="">Unit Price</label>
+        <input type="text" id="unitPrice">
+    </div>
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+    <hr>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+<script>
+        //Ekle butonuna bastığında ürünün adını ve fiyatını inputlardan alsın ve ul içerisine eklesin
+        function add(){
+            var productName = document.getElementById("name").value
+            var unitPrice = document.getElementById("unitPrice").value
+
+            var liElement = document.createElement("li")
+            liElement.innerHTML = productName + " " + unitPrice
+
+            document.querySelector("ul").appendChild(liElement)
+        }
+</script>
+</html>

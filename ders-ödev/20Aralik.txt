@@ -1,1 +1,9 @@
 1) https://northwind.vercel.app/api/products adreste bulunan dataları projene kopyala
+
+    //Fiyatı 200 den büyük ürünleri console a yazdır
+    //Fiyatı 300 den küçük ürünleri console a yazdır
+    //Fiyatı 100-200 arasındaki ürünleri console yazdır.
+    //Fiyatı 20 den küçük kaç ürün var?
+    //İsmi a harfi ile başlayan ürünleri yazdır
+
+    //** Adında x geçen ürünler
