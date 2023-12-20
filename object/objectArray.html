@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // i am creating an object array. object properties are name, unitPrice, unitsInStock
+
+    var products = [
+        {name:"Samsung S6", unitPrice:3000, unitsInStock:10},
+        {name:"Samsung S7", unitPrice:4000, unitsInStock:15},
+        {name:"Samsung S8", unitPrice:5000, unitsInStock:3},
+        {name:"Samsung S9", unitPrice:6000, unitsInStock:0},
+        {name:"Samsung S10", unitPrice:7000, unitsInStock:5},
+        {name:"Huawei", unitPrice:7200, unitsInStock:15},
+
+    ]
+
+    //fiyatı 3000 den büyük ürünleri console yazdır
+    var filteredProducts = products.filter(item => item.unitPrice > 3000)
+    console.log(filteredProducts);
+
+
+    //H harfi ile başlayanları yazdır
+    var filteredProducts2 = products.filter(q => q.name.startsWith("H"))
+    console.log(filteredProducts2);
+
+
+
+
+    //kaç adet ürün var?
+    console.log(products.length);
+
+    //ilk ürünün adı nedir
+    console.log(products[0].name);
+
+    //ilk ürünün fiyatı nedir
+    console.log(products[0].unitPrice);
+
+    //Tüm ürün adlarını console a yazdır
+    products.forEach(item => {
+        console.log(item.name);
+    })
+
+
+
+
+
+</script>
+</html>
