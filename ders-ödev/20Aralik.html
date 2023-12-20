@@ -506,7 +506,7 @@
         id: 36,
         supplierId: 17,
         categoryId: 8,
-        quantityPerUnit: "24 - 250 g jars",
+        quantityPerUnit: "24 - 250 g  jars",
         unitPrice: 19,
         unitsInStock: 112,
         unitsOnOrder: 0,
@@ -971,7 +971,6 @@
         name: "Original Frankfurter grüne Soße",
       },
     ];
-
     //Fiyatı 200 den büyük ürünleri console a yazdır
     //Fiyatı 300 den küçük ürünleri console a yazdır
     //Fiyatı 100-200 arasındaki ürünleri console yazdır.
@@ -1001,7 +1000,7 @@
     console.log("between 100 and 200 hundred", betweenOneHundredOrTwoHunder);
 
     const startsWithALetter = products.filter((product) => {
-      return product.name.startsWith("A") || product.name.startsWith("a");
+      return product.name.toLowerCase().startsWith("a");
     });
     console.log("starts with letter A", startsWithALetter);
 
@@ -1013,9 +1012,7 @@
     console.log("length of numbers lower than 20", lowerThanTwentyLength);
 
     const includesXLetter = products.filter((product) => {
-      return (
-        product.name.indexOf("x") !== -1 || product.name.indexOf("X") !== -1
-      );
+      return product.name.toLowerCase().indexOf("x") !== -1;
     });
 
     console.log("strings that includes X", includesXLetter);
