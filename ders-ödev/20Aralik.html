@@ -982,5 +982,62 @@
 
     //** Adında x geçen ürünler
 
+    //Fiyatı 200 den büyük ürünleri console a yazdır
+
+      products.forEach(function (product) {
+        if (product.unitPrice > 200) {
+          console.log(`Fiyatı 200 den büyük ürünleri console a yazdır
+            ${product.name} - Fiyat: ${product.unitPrice}`); // Côte de Blaye - Fiyat: 263.5
+        }
+      });
+      //Fiyatı 300 den küçük ürünleri console a yazdır
+
+      let cheapProducts = products.filter(function (product) {
+        return product.unitPrice < 300;
+      });
+
+      let allCheapProducts = cheapProducts.map(function (product) {
+        return `${product.name} - Fiyat: ${product.unitPrice}`;
+      });
+
+      console.log(allCheapProducts);
+
+      //Fiyatı 100-200 arasındaki ürünleri console yazdır.
+
+      products.forEach(function (product) {
+        if (product.unitPrice >= 100 && product.unitPrice <= 200) {
+          console.log(`Fiyatı 100-200 arasındaki ürünler
+          ${product.name} - Fiyat: ${product.unitPrice}`);
+        }
+      });
+
+      //Fiyatı 20 den küçük kaç ürün var?
+
+      let count = 0;
+      products.forEach(function (product) {
+        if (product.unitPrice < 20) {
+          count++;
+        }
+      });
+
+      console.log(`Fiyatı 20'den küçük olan ürün sayısı: ${count}`);
+
+      //İsmi a harfi ile başlayan ürünleri yazdır
+
+      products.forEach(function (product) {
+        if (product.name.charAt(0).toLowerCase() === 'a') {
+          console.log('İsmi a harfi ile başlayan ürünler: ' + product.name);
+        }
+      });
+
+      
+      //** Adında x geçen ürünler
+
+      products.forEach(function (product) {
+        if (product.name.toLowerCase().includes('x')) {
+          console.log('Adında x geçen ürünler: ' + product.name);
+        }
+      });
+
 </script>
 </html>
